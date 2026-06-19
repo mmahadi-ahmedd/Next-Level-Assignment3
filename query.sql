@@ -112,3 +112,10 @@ ORDER BY u.user_id;
 SELECT booking_id, match_id, total_cost
 FROM bookings
 WHERE total_cost > (SELECT AVG(total_cost) FROM bookings);
+
+-- Query 7: Pagination (LIMIT + OFFSET)
+
+SELECT match_id, fixture, base_ticket_price
+FROM matches
+ORDER BY base_ticket_price DESC
+LIMIT 2 OFFSET 1;
