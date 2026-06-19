@@ -1,5 +1,10 @@
 CREATE DATABASE football_ticketing;
 
+
+DROP TABLE IF EXISTS bookings;
+DROP TABLE IF EXISTS matches;
+DROP TABLE IF EXISTS users;
+
 CREATE TABLE users (
     user_id SERIAL PRIMARY KEY,
     full_name VARCHAR(100) NOT NULL,
